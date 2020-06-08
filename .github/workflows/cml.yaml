@@ -35,6 +35,6 @@ jobs:
           echo >> report.md
           
           # Add figure to report
-          dvc plots diff --target loss.csv --show-vega master > tmp.json
+          dvc plots diff --target loss.csv --show-vega master > vega.json
           vl2png vega.json -s 1.5 | cml-publish --md --title "loss plot" >> report.md
           cml-send-comment report.md 
