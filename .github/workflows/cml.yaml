@@ -17,8 +17,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           # Get DVC 1.0 
-          apt-get --purge remove -y dvc
-          pip install "git+https://github.com/iterative/dvc#egg=dvc[s3]"
+          pip install dvc
           
           
           pip install -r requirements.txt
@@ -35,5 +34,5 @@ jobs:
           
           # Add figure to report
           dvc plots diff --target loss.csv --show-vega master > vega.json
-          vl2png vega.json -s 1.5 | cml-publish --md --title "loss plot" >> report.md
+          vl2png vega.json -s 1.5 | cml-publish --md >> report.md
           cml-send-comment report.md 
