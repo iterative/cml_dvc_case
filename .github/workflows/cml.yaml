@@ -32,7 +32,6 @@ jobs:
           # Use DVC metrics diff to compare metrics to master
           git fetch --prune --unshallow
           dvc metrics diff --show-md master >> report.md
-          echo >> report.md
           
           # Add figure to report
           dvc plots diff --target loss.csv --show-vega master > vega.json
