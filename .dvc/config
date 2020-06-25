@@ -1,4 +1,4 @@
 [core]
     remote = myremote
 ['remote "myremote"']
-    url = s3://dvc-temp/scratch
+    url = s3://dvc-public/remote/cml_example
