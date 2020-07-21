@@ -2,9 +2,9 @@ mystage:
   cmd: python train.py
   deps:
   - path: data
-    md5: c5a2bbc6820f83da3788d7dceb32c42d.dir
+    md5: 9230c4ba0fcd78386bfaf9cc796a8193.dir
   - path: train.py
-    md5: c909a2d22ced09b274103fdae5684766
+    md5: f6a45c6c760b01e4046c80a162979ec0
   outs:
   - path: loss.csv
     md5: b8e6e7766dcc23a2efd5bcfc8183e69d
