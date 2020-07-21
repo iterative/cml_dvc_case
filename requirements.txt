@@ -2,5 +2,3 @@ sklearn
 pandas
 matplotlib
 pydrive2
-dvc["gdrive"]
-dvc["all"]
