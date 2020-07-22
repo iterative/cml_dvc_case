@@ -11,15 +11,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: cml_run
+        shell: bash
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+          
         run: |
-          # Get DVC 1.0 
-          pip install dvc[s3]
-          
-          
           pip install -r requirements.txt
           
           # Pull dataset with DVC 
