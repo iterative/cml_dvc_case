@@ -16,7 +16,6 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN}} 
         run: |
-                    
           pip install -r requirements.txt
           
           # Pull dataset with DVC 
