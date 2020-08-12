@@ -17,7 +17,7 @@ jobs:
           
         run: |
           # Get DVC 1.0 
-          pip install dvc[s3]
+          #pip install dvc[s3]
           
           
           pip install -r requirements.txt
