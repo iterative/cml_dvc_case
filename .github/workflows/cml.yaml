@@ -17,7 +17,7 @@ jobs:
 
       - uses: iterative/setup-dvc@v1
         with:
-          version: '1.0.1'
+          version: 'latest'
 
 
       - name: cml_run
