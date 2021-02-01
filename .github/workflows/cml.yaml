@@ -16,6 +16,9 @@ jobs:
       - uses: iterative/setup-cml@v1
 
       - uses: iterative/setup-dvc@v1
+        with:
+          version: '1.0.1'
+
 
       - name: cml_run
         env:
