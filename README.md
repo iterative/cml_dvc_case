@@ -16,6 +16,7 @@ In this example, `.github/workflows/cml.yaml` contains three environmental varia
 |  GITHUB_TOKEN | This is set by default in every GitHub repository. It does not need to be manually added.  |
 | AWS_ACCESS_KEY_ID  | AWS credential for accessing S3 storage  | 
 | AWS_SECRET_ACCESS_KEY | AWS credential for accessing S3 storage |
+| AWS_SESSION_TOKEN | Optional AWS credential for accessing S3 storage (if MFA is enabled) |
 
 DVC works with many kinds of remote storage. To configure this example for a different cloud storage provider, see our [documentation on the CML repository](https://github.com/iterative/cml#using-cml-with-dvc).
 
