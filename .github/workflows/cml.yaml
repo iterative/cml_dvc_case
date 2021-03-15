@@ -34,7 +34,7 @@ jobs:
           dvc repro
 
           
-          if [[ $(dvc repro) != '*pipelines are up to date*' ]]; then
+          if [[ $(git status --porcelain | grep 'dvc.lock') ]]; then
             echo 'commit'
           fi
           

@@ -1,3 +1,3 @@
-if [[ $(dvc repro) != '*pipelines are up to date*' ]]; then
-echo 'sdsds'
+if [[ $(git status --porcelain | grep 'dvc.lock') ]]; then
+echo 'commit'
 fi
