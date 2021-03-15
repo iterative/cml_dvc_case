@@ -30,6 +30,7 @@ jobs:
           dvc pull data
           
           # Reproduce pipeline if any changes detected in dependencies
+          dvc repro | grep 'pipelines are up to date'
           
           if [[ $(dvc repro | grep 'pipelines are up to date') != '*pipelines are up to date*' ]]; then
             git config --local user.email "action@github.com"
