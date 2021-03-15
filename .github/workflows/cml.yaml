@@ -30,7 +30,7 @@ jobs:
           dvc pull data
           
           # Reproduce pipeline if any changes detected in dependencies
-          dvc repro --json
+          dvc repro --show-json
 
           (
             git config --local user.email "action@github.com"
