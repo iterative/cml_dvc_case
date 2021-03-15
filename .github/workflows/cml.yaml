@@ -43,6 +43,8 @@ jobs:
 
             git push 
             dvc push
+
+            echo 'commited'
           ) || (
             # Use DVC metrics diff to compare metrics to master
             dvc metrics diff --show-md master >> report.md
