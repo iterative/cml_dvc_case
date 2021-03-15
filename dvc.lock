@@ -1,12 +1,19 @@
-mystage:
-  cmd: python train.py
-  deps:
-  - path: data
-    md5: c5a2bbc6820f83da3788d7dceb32c42d.dir
-  - path: train.py
-    md5: c909a2d22ced09b274103fdae5684766
-  outs:
-  - path: loss.csv
-    md5: b8e6e7766dcc23a2efd5bcfc8183e69d
-  - path: metrics.json
-    md5: 0955b6cb503d807426bab33d28358988
+schema: '2.0'
+stages:
+  mystage:
+    cmd: python train.py
+    deps:
+    - path: data
+      md5: c5a2bbc6820f83da3788d7dceb32c42d.dir
+      size: 53504810
+      nfiles: 4
+    - path: train.py
+      md5: e1a113e9a348b86c540706c089b149f0
+      size: 893
+    outs:
+    - path: loss.csv
+      md5: c7de02a9202375be790abdd3a4b8b05c
+      size: 568
+    - path: metrics.json
+      md5: 00fccf7e9790d7afd8563849d9103c07
+      size: 84
