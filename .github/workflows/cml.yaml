@@ -32,5 +32,8 @@ jobs:
           # Reproduce pipeline if any changes detected in dependencies
           dvc repro
 
-         
+          
+          if [[ $(dvc repro) != '*pipelines are up to date*' ]]; then
+            echo 'commit'
+          fi
           
