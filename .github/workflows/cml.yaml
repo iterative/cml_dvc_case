@@ -31,7 +31,7 @@ jobs:
           dvc pull
           
           # Reproduce pipeline if any changes detected in dependencies
-          dvc repro && (
+          dvc repro || (
           
           # Use DVC metrics diff to compare metrics to master
           dvc metrics diff --show-md master >> report.md
