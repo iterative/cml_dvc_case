@@ -24,15 +24,16 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           pip install -r requirements.txt
+
+          git fetch --prune --unshallow
           
           # Pull dataset with DVC 
-          dvc pull data
+          dvc pull
           
           # Reproduce pipeline if any changes detected in dependencies
           dvc repro 
           
           # Use DVC metrics diff to compare metrics to master
-          git fetch --prune --unshallow
           dvc metrics diff --show-md master >> report.md
           
           # Add figure to report
