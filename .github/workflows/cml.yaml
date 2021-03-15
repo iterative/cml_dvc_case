@@ -33,8 +33,26 @@ jobs:
           # Reproduce pipeline if any changes detected in dependencies
           dvc repro
 
-          
           if [[ $(git status --porcelain | grep 'dvc.lock') ]]; then
-            echo 'commit!'
+            echo 'CML commit'
+
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+
+            # commit dvc.lock and files
+            git add dvc.lock
+            git add loss.csv metrics.json
+            git commit -m "CML commit"
+
+            git push 
+            dvc push
+
+            # Use DVC metrics diff to compare metrics to master
+            dvc metrics diff --show-md master >> report.md
+            
+            # Add figure to report
+            dvc plots diff --target loss.csv --show-vega master > vega.json
+            vl2png vega.json -s 1.3 | cml-publish --md >> report.md
+            cml-send-comment report.md 
           fi
           
