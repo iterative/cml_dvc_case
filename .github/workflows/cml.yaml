@@ -35,6 +35,6 @@ jobs:
 
           
           if [[ $(git status --porcelain | grep 'dvc.lock') ]]; then
-            echo 'commit'
+            echo 'commit!'
           fi
           
