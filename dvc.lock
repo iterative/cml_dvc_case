@@ -8,12 +8,12 @@ stages:
       size: 53504810
       nfiles: 4
     - path: train.py
-      md5: e1a113e9a348b86c540706c089b149f0
+      md5: a4808ca0dd4e3bf343c11921bad4b2a4
       size: 893
     outs:
     - path: loss.csv
-      md5: c7de02a9202375be790abdd3a4b8b05c
-      size: 568
+      md5: fafa5936bf7771914b2667d084efb8e8
+      size: 528
     - path: metrics.json
-      md5: 00fccf7e9790d7afd8563849d9103c07
-      size: 84
+      md5: c6ee1fb2fe0e5adfb6d4b4d7d07c3e6a
+      size: 83
