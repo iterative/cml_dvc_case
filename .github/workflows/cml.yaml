@@ -28,25 +28,15 @@ jobs:
           
           # Pull dataset with DVC 
           pip install dvc[all]
-          dvc pull data
+          dvc pull --run-cache
           
           # Reproduce pipeline if any changes detected in dependencies
           dvc repro
 
           if [[ $(git status --porcelain | grep 'dvc.lock') ]]; then
-            echo 'CML commit'
-
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-
-            # commit dvc.lock and files
-            git pull
-            git add dvc.lock
-            git add loss.csv metrics.json
-            git commit -m "CML commit"
-
-            git push 
-            dvc push
+            echo 'DVC push cache'
+ 
+            dvc push --run-cache
 
             # Use DVC metrics diff to compare metrics to master
             dvc metrics diff --show-md master >> report.md
