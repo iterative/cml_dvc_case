@@ -1,4 +1,12 @@
 [core]
-    remote = myremote
+    remote = myremote10
 ['remote "myremote"']
     url = s3://dvc-public/remote/cml_example
+['remote "myremote2"']
+    url = gdrive://0AIac4JZqHhKmUk9PDA/dvcstore
+['remote "myremote3"']
+    url = gdrive://dvc/
+['remote "myremote1"']
+    url = gdrive://dvc/
+['remote "myremote10"']
+    url = gdrive://1scSdOpQyDVrVenOAGaW7w08d_LdbwAXf
