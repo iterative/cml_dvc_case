@@ -30,7 +30,7 @@ rec = recall_score(y_test,y_score)
 loss = clf.loss_curve_
 pd.DataFrame(loss, columns=["loss"]).to_csv("loss.csv", index=False)
 
-with open("metrics.json", 'w') as outfile:
+with open("metrics.json", 'w')  as outfile:
         json.dump({ "accuracy": acc, "precision":prec,"recall":rec}, outfile)
 
 
