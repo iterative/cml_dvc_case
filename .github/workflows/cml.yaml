@@ -1,3 +1,4 @@
+
 name: train-my-model
 
 on: [push]
@@ -16,7 +17,13 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-
+	
+			- uses: google-github-actions/setup-gcloud@master
+				with:
+					project_id: ${{ secrets.GCP_PROJECT_ID }}
+					service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+					export_default_credentials: true
+          
       - name: cml
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
