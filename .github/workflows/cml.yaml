@@ -24,6 +24,9 @@ jobs:
         run: |
           pip install -r requirements.txt
           
+          gcloud auth activate-service-account --key-file=${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+          gsutil
+          
           # Pull dataset with DVC 
           dvc pull data
           
