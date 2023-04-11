@@ -30,6 +30,10 @@ jobs:
           # Pull dataset with DVC
           dvc pull data
 
+          pwd
+
+          ls
+
           # Reproduce pipeline if any changes detected in dependencies
           dvc repro
 
