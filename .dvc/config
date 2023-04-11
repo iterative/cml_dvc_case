@@ -1,4 +1,6 @@
 [core]
-    remote = myremote
+    remote = mys3
 ['remote "myremote"']
     url = s3://dvc-public/remote/cml_example
+['remote "mys3"']
+    url = s3://san-dataset-bucket/path/cml_dvc_case/
