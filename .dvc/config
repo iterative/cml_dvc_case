@@ -1,4 +1,5 @@
 [core]
     remote = myremote
+    analytics = false
 ['remote "myremote"']
-    url = s3://dvc-public/remote/cml_example
+    url = s3://prz-bucket/cml_example
