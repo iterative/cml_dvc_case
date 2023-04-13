@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import os
 
-seed = 42
+seed = 43
 # Generate data
 X, y = make_classification(n_samples = 100000, random_state=seed)
 
